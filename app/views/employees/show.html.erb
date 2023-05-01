@@ -1,0 +1,19 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><%= @employee.first_name %> <%= @employee.last_name %></h5>
+        <%= link_to "", employees_path, class: 'btn-close' %>
+      </div>
+      <div class="modal-body">
+        <p><strong>Phone:</strong> <%= @employee.phone %></p>
+        <p><strong>Email:</strong> <%= @employee.email %></p>
+      </div>
+      <div class="modal-footer">
+        <%= link_to "Back to employees", employees_path, class: 'btn btn-primary' %>
+        <%= link_to "Edit this employee", edit_employee_path(@employee), class: 'btn btn-secondary' %>
+        <%= button_to "Destroy this employee", @employee, method: :delete, class: 'btn btn-danger' %>
+      </div>
+    </div>
+  </div>
+
+
